@@ -2,6 +2,8 @@
 
 Raspberry Pi Pico W + an EPD_2in13_V4 e-inc display weather station. 
 
+![preview_image](https://raw.githubusercontent.com/MinchoVelev/weather.pi/refs/heads/main/weatherpi.png)
+
 ## How to run
 
 1. Connect the raspberry to Thonny or any other way to manage it.
