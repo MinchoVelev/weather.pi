@@ -500,22 +500,22 @@ if __name__ == '__main__':
                 count = int(300 / 10) # full refresh every 5 mins
                 epd.fill(0xff)
                 result = fetchWeatherData()
-                epd.text(result["localTime"], 0, 10, 0x00)
-                spaces = 20 - len(result["text"])
+                epd.text(result["localTime"].split("-", 1)[1], 0, 10, 0x00)
+            
                 headerLine = result["text"]
-                for i in range(spaces):
-                    headerLine += " "
-                headerLine += "Today"
+                
                 epd.text(headerLine, 0, 25, 0x00)
-                epd.vline(120,40, 70, 0x00)
+                epd.text("Today", 160, 10, 0x00)
+                epd.vline(120,20, 90, 0x00)
                 
                 # go to the right side
                 x = 135
-                y = 40
+                y = 25
                 
                 writeN(str(round(float(result["currentMin"]))) + "to" + str(round(float(result["currentMax"]))), 10)
                 
-                
+                epd.text(result["currentWind"] + " k/h", 130, 50, 0x00)
+                epd.hline(135, 64, 100, 0x00)
                 epd.text("Tomorrow", 150, 70, 0x00)
                 
                 # go to next line
@@ -535,6 +535,8 @@ if __name__ == '__main__':
                 
                 x = 150
                 y = 112
+                writeN("/", 7) # rain
+                writeN("*", 7) # snow
                 if(result["tomorrowRain"] == "yes"):
                     writeN("/", 7) # rain
                 if(result["tomorrowSnow"] == "yes"):
