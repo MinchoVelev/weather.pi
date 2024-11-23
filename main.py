@@ -497,7 +497,7 @@ if __name__ == '__main__':
             
             if count == 0:
                 epd.init()
-                count = 12
+                count = int(300 / 10) # full refresh every 5 mins
                 epd.fill(0xff)
                 result = fetchWeatherData()
                 epd.text(result["localTime"], 0, 10, 0x00)
