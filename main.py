@@ -535,8 +535,7 @@ if __name__ == '__main__':
                 
                 x = 150
                 y = 112
-                writeN("/", 7) # rain
-                writeN("*", 7) # snow
+
                 if(result["tomorrowRain"] == "yes"):
                     writeN("/", 7) # rain
                 if(result["tomorrowSnow"] == "yes"):
