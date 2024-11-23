@@ -1,6 +1,6 @@
 # weather.pi
 
-Raspberry Pi Pico W + an EPD_2in13_V4 e-inc display weather station. 
+Raspberry Pi Pico W + an EPD_2in13_V3 e-inc display weather station. 
 
 ![preview_image](https://raw.githubusercontent.com/MinchoVelev/weather.pi/refs/heads/main/weatherpi.png)
 
